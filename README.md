@@ -2,7 +2,7 @@
 **Overview**
 
 Following a wrist injury that made repetitive typing difficult for my wife, I developed the Apex Proxistroke. Her role requires frequent logging into various systems throughout the day; this device automates that process by securely injecting credentials at the touch of an RFID card.
-Hardware
+
 
 **The system is built for simplicity and reliability using:**
 
