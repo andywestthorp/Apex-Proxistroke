@@ -101,6 +101,6 @@ We are using the internal `INPUT_PULLUP` resistors in the code, so you only need
 ** OnShape enclosure **
 
 Feel free to copy the enclosure here and 3d print your own.
-If you cone up with a less boring design, please share.
+If you make a less boring design, please share.
 
 https://cad.onshape.com/documents/0ef05c768de59ed3a16de24d/w/20c9785c92aee0c8e3add6a8/e/77e8d892766bfce11dbebde7
