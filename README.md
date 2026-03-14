@@ -96,3 +96,11 @@ We are using the internal `INPUT_PULLUP` resistors in the code, so you only need
 | **Authorisation** | 3+ | Mifare Classic 1K Tags | Physical keys (1 Master, 2 User slots). |
 | **Connection** | 1 | Micro-USB Cable | Data and power connection to the workstation. |
 | **Construction** | 1 | Project Box / Enclosure | Houses the hardware for desk use. |
+
+
+** OnShape enclosure **
+
+Feel free to copy the enclosure here and 3d print your own.
+If you cone up wuth a less boring design, please share.
+
+https://cad.onshape.com/documents/0ef05c768de59ed3a16de24d/w/20c9785c92aee0c8e3add6a8/e/77e8d892766bfce11dbebde7
