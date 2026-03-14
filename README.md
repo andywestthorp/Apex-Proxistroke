@@ -35,3 +35,68 @@ Usage
 Feel free to modify, fork, or improve upon this design!
 
 Andy 14 March 2026
+
+
+Nitty Gritty Details
+
+A clear wiring diagram is the best way to make sure other makers don't end up with a "rats nest" despite the I2C board. Since the Leonardo/Pro Micro uses specific pins for SPI (RFID) and I2C (LCD), getting the pinout right is crucial.
+
+### **Apex Proxistroke Wiring Guide**
+
+#### **1. I2C LCD (20x4 Display)**
+
+The I2C backpack is a lifesaver. It reduces 16 pins down to just 4.
+
+* **GND** $\rightarrow$ Arduino **GND**
+* **VCC** $\rightarrow$ Arduino **5V**
+* **SDA** $\rightarrow$ Arduino **Pin 2** (SDA)
+* **SCL** $\rightarrow$ Arduino **Pin 3** (SCL)
+
+> *Note: On the Leonardo, Pins 2 and 3 are the dedicated I2C bus.*
+
+---
+
+#### **2. RFID-RC522 Module**
+
+This module uses the SPI protocol. Note that it **must** be powered by 3.3V, not 5V.
+
+* **VCC** $\rightarrow$ Arduino **3.3V** (Warning: 5V will damage the sensor)
+* **RST** $\rightarrow$ Arduino **Pin 9**
+* **GND** $\rightarrow$ Arduino **GND**
+* **IRQ** $\rightarrow$ *Leave Unconnected*
+* **MISO** $\rightarrow$ Arduino **ICSP-3** (or Pin 14)
+* **MOSI** $\rightarrow$ Arduino **ICSP-4** (or Pin 16)
+* **SCK** $\rightarrow$ Arduino **ICSP-1** (or Pin 15)
+* **SDA (SS)** $\rightarrow$ Arduino **Pin 10**
+
+---
+
+#### **3. Navigation Buttons**
+
+We are using the internal `INPUT_PULLUP` resistors in the code, so you only need to wire one side of the button to the Pin and the other side to **GND**.
+
+* **Button UP** $\rightarrow$ Arduino **Pin 7**
+* **Button DOWN** $\rightarrow$ Arduino **Pin 8**
+* **Button SELECT** $\rightarrow$ Arduino **Pin 6**
+
+---
+
+### **Technical Tips for the Build**
+
+* **Pro Micro vs Leonardo:** If you use a **Pro Micro**, the SPI pins (MISO/MOSI/SCK) are physically on pins 14, 16, and 15. On the full-sized **Leonardo**, they are often *only* accessible via the 6-pin ICSP header in the middle of the board.
+* **Current Draw:** The RFID reader and the LCD backlight together can pull a decent amount of current. If the LCD looks dim or the RFID fails to read, double-check that your USB cable is high quality.
+* **I2C Address:** If the screen lights up but shows no text, ensure the I2C address in the code (`0x27`) matches your hardware. You might also need to turn the small blue potentiometer on the back of the LCD to adjust the contrast.
+* **RFID Voltage:** When assembling the Apex Proxistroke, pay close attention to the RFID module power. The RC522 is strictly a 3.3V device. Connecting it to the 5V rail will likely burn out the chip.
+
+### **Parts List**
+
+| Item | Qty | Component Description | Purpose |
+| :--- | :--: | :--- | :--- |
+| **Microcontroller** | 1 | Arduino Leonardo (or Pro Micro) | Logic controller with native USB HID support. |
+| **RFID Reader** | 1 | RC522 RFID Module (13.56MHz) | Authenticates users via proximity cards/fobs. |
+| **LCD Display** | 1 | 2004 LCD (20x4 Characters) | Displays the user interface and system status. |
+| **I2C Interface** | 1 | PCF8574 I2C Backpack | Converts parallel LCD to a 2-wire serial interface. |
+| **Input** | 3 | Momentary Push Buttons | Tactile switches for Up, Down, and Select. |
+| **Authorisation** | 3+ | Mifare Classic 1K Tags | Physical keys (1 Master, 2 User slots). |
+| **Connection** | 1 | Micro-USB Cable | Data and power connection to the workstation. |
+| **Construction** | 1 | Project Box / Enclosure | Houses the hardware for desk use. |
