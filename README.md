@@ -34,7 +34,7 @@ Hardware
 
 Feel free to modify, fork, or improve upon this design!
 
-Andy 14 March 2026
+Andy. 14 March 2026
 
 ---
 ### **Apex Proxistroke Wiring Guide**
