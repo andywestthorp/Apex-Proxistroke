@@ -1,10 +1,10 @@
-Apex Proxistroke
-Overview
+***Apex Proxistroke***
+**Overview**
 
 Following a wrist injury that made repetitive typing difficult for my wife, I developed the Apex Proxistroke. Her role requires frequent logging into various systems throughout the day; this device automates that process by securely injecting credentials at the touch of an RFID card.
 Hardware
 
-The system is built for simplicity and reliability using:
+**The system is built for simplicity and reliability using:**
 
     Microcontroller: Arduino Leonardo (or Pro Micro) for native HID keyboard emulation.
 
@@ -14,7 +14,7 @@ The system is built for simplicity and reliability using:
 
     Input: Three-button navigation for credential selection.
 
-Key Features
+**Key Features**
 
     Multi-Tier Authorisation: Supports one Master Key and two User Keys. This allows for a permanent "Home Key" and replaceable daily-use tags.
 
@@ -24,7 +24,7 @@ Key Features
 
     EEPROM Storage: Credentials are stored directly on the Arduino's internal memory for speed and stability, after initial experiments with storing data on RFID tags proved unreliable.
 
-Usage
+**Usage**
 
     Select: Use the buttons to scroll through the pre-set accounts.
 
@@ -36,11 +36,7 @@ Feel free to modify, fork, or improve upon this design!
 
 Andy 14 March 2026
 
-
-Nitty Gritty Details
-
-A clear wiring diagram is the best way to make sure other makers don't end up with a "rats nest" despite the I2C board. Since the Leonardo/Pro Micro uses specific pins for SPI (RFID) and I2C (LCD), getting the pinout right is crucial.
-
+---
 ### **Apex Proxistroke Wiring Guide**
 
 #### **1. I2C LCD (20x4 Display)**
