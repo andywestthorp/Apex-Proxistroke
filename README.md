@@ -43,10 +43,10 @@ Andy. 14 March 2026
 
 The I2C backpack is a lifesaver. It reduces 16 pins down to just 4.
 
-* **GND** $\rightarrow$ Arduino **GND**
-* **VCC** $\rightarrow$ Arduino **5V**
-* **SDA** $\rightarrow$ Arduino **Pin 2** (SDA)
-* **SCL** $\rightarrow$ Arduino **Pin 3** (SCL)
+* **GND** Arduino **GND**
+* **VCC** Arduino **5V**
+* **SDA** Arduino **Pin 2** (SDA)
+* **SCL** Arduino **Pin 3** (SCL)
 
 > *Note: On the Leonardo, Pins 2 and 3 are the dedicated I2C bus.*
 
@@ -56,14 +56,14 @@ The I2C backpack is a lifesaver. It reduces 16 pins down to just 4.
 
 This module uses the SPI protocol. Note that it **must** be powered by 3.3V, not 5V.
 
-* **VCC** $\rightarrow$ Arduino **3.3V** (Warning: 5V will damage the sensor)
-* **RST** $\rightarrow$ Arduino **Pin 9**
-* **GND** $\rightarrow$ Arduino **GND**
-* **IRQ** $\rightarrow$ *Leave Unconnected*
-* **MISO** $\rightarrow$ Arduino **ICSP-3** (or Pin 14)
-* **MOSI** $\rightarrow$ Arduino **ICSP-4** (or Pin 16)
-* **SCK** $\rightarrow$ Arduino **ICSP-1** (or Pin 15)
-* **SDA (SS)** $\rightarrow$ Arduino **Pin 10**
+* **VCC** Arduino **3.3V** (Warning: 5V will damage the sensor)
+* **RST** Arduino **Pin 9**
+* **GND** Arduino **GND**
+* **IRQ** *Leave Unconnected*
+* **MISO** Arduino **ICSP-3** (or Pin 14)
+* **MOSI** Arduino **ICSP-4** (or Pin 16)
+* **SCK** Arduino **ICSP-1** (or Pin 15)
+* **SDA (SS)** Arduino **Pin 10**
 
 ---
 
@@ -71,9 +71,9 @@ This module uses the SPI protocol. Note that it **must** be powered by 3.3V, not
 
 We are using the internal `INPUT_PULLUP` resistors in the code, so you only need to wire one side of the button to the Pin and the other side to **GND**.
 
-* **Button UP** $\rightarrow$ Arduino **Pin 7**
-* **Button DOWN** $\rightarrow$ Arduino **Pin 8**
-* **Button SELECT** $\rightarrow$ Arduino **Pin 6**
+* **Button UP** Arduino **Pin 7**
+* **Button DOWN** Arduino **Pin 8**
+* **Button SELECT** Arduino **Pin 6**
 
 ---
 
