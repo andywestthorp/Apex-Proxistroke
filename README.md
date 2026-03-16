@@ -1,4 +1,4 @@
-# Apex Proxistroke (v1.5.3)
+# Proxi-Type (v1.5.3)
 
 ### **Overview**
 
