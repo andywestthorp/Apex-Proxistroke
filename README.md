@@ -2,7 +2,7 @@
 
 ### **Overview**
 
-The **Apex Proxistroke** is a hardware-based credential injector designed as an assistive technology solution. Following a wrist injury that made repetitive typing painful, this device was created to automate the login process for various workstations. By tapping an authorised RFID tag, the device emulates a USB keyboard and securely types credentials.
+The **Proxi-Type** is a hardware-based credential injector designed as an assistive technology solution. Following a wrist injury that made repetitive typing painful, this device was created to automate the login process for various workstations. By tapping an authorised RFID tag, the device emulates a USB keyboard and securely types credentials.
 
 ![](IMG_2869.jpeg)
 
@@ -22,7 +22,7 @@ The **Apex Proxistroke** is a hardware-based credential injector designed as an 
 
 ### **1. Hardware Setup**
 
-Connect the device via USB. The LCD will display the **Apex Proxistroke** splash screen and load your menu. Use the **UP** and **DOWN** buttons to navigate and **SELECT** to choose an entry.
+Connect the device via USB. The LCD will display the **Proxi-Type** splash screen and load your menu. Use the **UP** and **DOWN** buttons to navigate and **SELECT** to choose an entry.
 
 ### **2. The "First Run" (Setting the Master Key)**
 
@@ -89,7 +89,7 @@ If you are locked out or the EEPROM contains corrupt data:
 * **Pro Micro vs Leonardo:** If you use a **Pro Micro**, the SPI pins (MISO/MOSI/SCK) are physically on pins 14, 16, and 15. On the full-sized **Leonardo**, they are often *only* accessible via the 6-pin ICSP header in the middle of the board.
 * **Current Draw:** The RFID reader and the LCD backlight together can pull a decent amount of current. If the LCD looks dim or the RFID fails to read, double-check that your USB cable is high quality.
 * **I2C Address:** If the screen lights up but shows no text, ensure the I2C address in the code (`0x27`) matches your hardware. You might also need to turn the small blue potentiometer on the back of the LCD to adjust the contrast.
-* **RFID Voltage:** When assembling the Apex Proxistroke, pay close attention to the RFID module power. The RC522 is strictly a 3.3V device. Connecting it to the 5V rail will likely burn out the chip.
+* **RFID Voltage:** When assembling the Proxi-Type, pay close attention to the RFID module power. The RC522 is strictly a 3.3V device. Connecting it to the 5V rail will likely burn out the chip.
 * **OnShape enclosure:**  Feel free to copy the enclosure here and 3d print your own.
 If you make a less boring design, please share.
 
